@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="theme"><i class="fa-regular fa-moon"></i></section>
+    <Section id="interface">
+<h1 class="heading">Tic Tac Toe</h1>
+<div class="mode">
+    <h2 class="level">Difficulty</h2>
+        <button id="easy" class="btn-mode" type="mode" onclick="difficultyMode()">Easy</button>
+        <button id="medium" class="btn-mode" type="mode" onclick="difficultyMode()">Medium</button>
+        <button id="diffcult" class="btn-mode" type="mode" onclick="difficultyMode() ">Difficult</button>
+</div>
+<div class="gameboards">
+    <h3>Player 1</h3>
+    <div class="column">
+        <div class="row">
+            <span class="option"></span>
+            <span class="option"></span>
+            <span class="option"></span>
+        </div>
+        <div class="row">
+            <span class="option"></span>    
+            <span class="option"></span>
+            <span class="option"></span>
+        </div>
+        <div class="row">
+            <span class="option"></span>
+            <span class="option"></span>
+            <span class="option"></span>
+        </div>
+    </div>
+    <div id="scoreboard">
+    <h3>Scoreboard</h3>
+    </div>
+    <h3>Player 2</h3>
+    <div class="column">
+        <div class="row">
+            <span class="option"></span>
+            <span class="option"></span>
+            <span class="option"></span>
+        </div>
+        <div class="row">
+            <span class="option"></span>    
+            <span class="option"></span>
+            <span class="option"></span>
+        </div>
+        <div class="row">
+            <span class="option"></span>
+            <span class="option"></span>
+            <span class="option"></span>
+        </div>
+    </div>
+</div>
+    </Section>
+    <script src="./scripts.js"></script>
+</body>
+</html>
