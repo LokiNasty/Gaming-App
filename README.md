@@ -1,2 +1,2 @@
-# Gaming-App
+# Solo-Leveling
 Game Development
