@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF- 8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
@@ -17,48 +17,48 @@
         <button id="medium" class="btn-mode" type="mode" onclick="difficultyMode()">Medium</button>
         <button id="diffcult" class="btn-mode" type="mode" onclick="difficultyMode() ">Difficult</button>
 </div>
-<div class="gameboards">
-    <h3>Player 1</h3>
-    <div class="column">
+<div class="board">
+    <h3">Player 1</h3>
+    <div class="column" id="playerOne">
         <div class="row">
-            <span class="option"></span>
-            <span class="option"></span>
-            <span class="option"></span>
+            <button class="option" onclick="makeMove(0, 0)"></button>
+            <button class="option" onclick="makeMove(0, 1)"></button>
+            <button class="option" onclick="makeMove(0, 2)"></button>
         </div>
         <div class="row">
-            <span class="option"></span>    
-            <span class="option"></span>
-            <span class="option"></span>
+            <button class="option" onclick="makeMove(1, 0)"></button>
+            <button class="option" onclick="makeMove(1, 1)"></button>
+            <button class="option" onclick="makeMove(1, 2)"></button>
         </div>
         <div class="row">
-            <span class="option"></span>
-            <span class="option"></span>
-            <span class="option"></span>
+            <button class="option" onclick="makeMove(2, 0)"></button>
+            <button class="option" onclick="makeMove(2, 1)"></button>
+            <button class="option" onclick="makeMove(2, 2)"></button>
         </div>
     </div>
     <div id="scoreboard">
     <h3>Scoreboard</h3>
     </div>
     <h3>Player 2</h3>
-    <div class="column">
+    <div class="column" id="playerTwo">
         <div class="row">
-            <span class="option"></span>
-            <span class="option"></span>
-            <span class="option"></span>
+            <button class="option" onclick="makeMove(0, 0)"></button>
+            <button class="option" onclick="makeMove(0, 1)"></button>
+            <button class="option" onclick="makeMove(0, 2)"></button>
         </div>
         <div class="row">
-            <span class="option"></span>    
-            <span class="option"></span>
-            <span class="option"></span>
+            <button class="option" onclick="makeMove(1, 0)"></button>
+            <button class="option" onclick="makeMove(1, 1)"></button>
+            <button class="option" onclick="makeMove(1, 2)"></button>
         </div>
         <div class="row">
-            <span class="option"></span>
-            <span class="option"></span>
-            <span class="option"></span>
+            <button class="option" onclick="makeMove(2, 0)"></button>
+            <button class="option" onclick="makeMove(2, 1)"></button>
+            <button class="option" onclick="makeMove(2, 2)"></button>
         </div>
-    </div>
 </div>
     </Section>
-    <script src="./scripts.js"></script>
+    <script src="./server_j.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
