@@ -1,73 +1,79 @@
-const { reset } = require("nodemon");
-
 let currentPlayer = 'X';
-let board= [
+let board = [
     ['', '', ''],
     ['', '', ''],
     ['', '', '']
 ];
+let playerScores = {
+  'X': 0,
+  'O': 0
+};
 
 function makeMove(row, col) {
-    if(board[row][col] === '') {
-        document.getElementById('board').children[row * 3 + col].innerText = currentPlayer;
+  let button = document.getElementById('board').querySelector(`.row-${row} .option-${col}`);
+  
+  if (board[row][col] === '') {
+      board[row][col] = currentPlayer;
+      button.innerText = currentPlayer;
 
-        if (checkinner()){
-            alert(currentPlayer + ' wins!');
-            resetGame();
-        } else if (boardIsFull){
-            alert('It\'s a draw!');
-            resetGame();
-        } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        }
-    }
+      if (checkWinner()) {
+        playerScores[currentPlayer]++;
+        updateScoreboard();
+          alert(currentPlayer + ' wins!');
+          resetGame();
+      } else if (boardIsFull()) {
+          alert('It\'s a draw!');
+          resetGame();
+      } else {
+          currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      }
+  }
 }
 
+function updateScoreboard() {
+    document.getElementById('player1Score').innerText = `Player 1 (X): ${playerScores['X']}`;
+    document.getElementById('player2Score').innerText = `Player 2 (O): ${playerScores['O']}`;
+}
 function checkWinner() {
-    for (let i = 0; i < 3; i++){
-        if(board[i][0] === currentPlayer && gameboards[i][1] === currentPlayer && gameboards[i][2] === currentPlayer) {
+    for (let i = 0; i < 3; i++) {
+        if (board[i][0] === currentPlayer && board[i][1] === currentPlayer && board[i][2] === currentPlayer) {
             return true;
         }
-    }
-}
-
-function checkWinner() {
-    for (let j = 0; i < 3; j++){
-        if(board[0][j] === currentPlayer && gameboards[1][j] === currentPlayer && gameboards[2][j] === currentPlayer) {
+        if (board[0][i] === currentPlayer && board[1][i] === currentPlayer && board[2][i] === currentPlayer) {
             return true;
         }
     }
 
     if ((board[0][0] === currentPlayer && board[1][1] === currentPlayer && board[2][2] === currentPlayer) ||
         (board[0][2] === currentPlayer && board[1][1] === currentPlayer && board[2][0] === currentPlayer)) {
-      return true;
+        return true;
     }
- 
+
     return false;
 }
 
-  function boardIsFull() {
+function boardIsFull() {
     for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-        if (board[i][j] === '') {
-          return false;
+        for (let j = 0; j < 3; j++) {
+            if (board[i][j] === '') {
+                return false;
+            }
         }
-      }
     }
     return true;
-  }
- 
-  function resetGame() {
+}
+
+function resetGame() {
     currentPlayer = 'X';
     board = [
-      ['', '', ''],
-      ['', '', ''],
-      ['', '', '']
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
     ];
- 
+updateScoreboard();
     // Clear the board display
     const buttons = document.getElementById('board').getElementsByTagName('button');
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].innerText = '';
+        buttons[i].innerText = '';
     }
-  }
+}

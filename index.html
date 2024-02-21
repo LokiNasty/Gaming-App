@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF- 8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <section id="theme"><i class="fa-regular fa-moon"></i></section>
-    <Section id="interface">
-<h1 class="heading">Tic Tac Toe</h1>
-<div class="mode">
-    <h2 class="level">Difficulty</h2>
-        <button id="easy" class="btn-mode" type="mode" onclick="difficultyMode()">Easy</button>
-        <button id="medium" class="btn-mode" type="mode" onclick="difficultyMode()">Medium</button>
-        <button id="diffcult" class="btn-mode" type="mode" onclick="difficultyMode() ">Difficult</button>
-</div>
-<div class="board">
-    <h3">Player 1</h3>
-    <div class="column" id="playerOne">
-        <div class="row">
-            <button class="option" onclick="makeMove(0, 0)"></button>
-            <button class="option" onclick="makeMove(0, 1)"></button>
-            <button class="option" onclick="makeMove(0, 2)"></button>
+    <section id="interface">
+        <h1 class="heading">Tic Tac Toe</h1>
+        <!-- <div class="mode">
+            <h2 class="level">Difficulty</h2>
+            <button id="easy" class="btn-mode" type="mode" onclick="">Easy</button>
+            <button id="medium" class="btn-mode" type="mode" onclick="">Medium</button>
+            <button id="difficult" class="btn-mode" type="mode" onclick="">Difficult</button>
+        </div> -->
+        <div id="board">
+            <h3>Player 1</h3>
+            <div class="column" id="playerOne">
+                <div class="row row-0">
+                    <button class="option option-0" onclick="makeMove(0, 0)"></button>
+                    <button class="option option-1" onclick="makeMove(0, 1)"></button>
+                    <button class="option option-2" onclick="makeMove(0, 2)"></button>
+                </div>
+                <div class="row row-1">
+                    <button class="option option-0" onclick="makeMove(1, 0)"></button>
+                    <button class="option option-1" onclick="makeMove(1, 1)"></button>
+                    <button class="option option-2" onclick="makeMove(1, 2)"></button>
+                </div>
+                <div class="row row-2">
+                    <button class="option option-0" onclick="makeMove(2, 0)"></button>
+                    <button class="option option-1" onclick="makeMove(2, 1)"></button>
+                    <button class="option option-2" onclick="makeMove(2, 2)"></button>
+                </div>
+            </div>
+            
+            <div id="scoreboard">
+                <h3>Scoreboard</h3>
+                <p id="player1Score">Player 1 (X): 0</p>
+                <p id="player2Score">Player 2 (O): 0</p>
+            </div>
+            <!-- <h3>Player 2</h3>
+            <div id="board2">
+
+                <div class="column" id="playerTwo">
+                 <div class="row row-0">
+                     <button class="option option-0" onclick="makeMove(3, 0)"></button>
+                     <button class="option option-1" onclick="makeMove(3, 1)"></button>
+                     <button class="option option-2" onclick="makeMove(3, 2)"></button>
+                 </div>
+                 <div class="row row-1">
+                     <button class="option option-0" onclick="makeMove(4, 0)"></button>
+                     <button class="option option-1" onclick="makeMove(4, 1)"></button>
+                     <button class="option option-2" onclick="makeMove(4, 2)"></button>
+                 </div>
+                 <div class="row row-2">
+                     <button class="option option-0" onclick="makeMove(5, 0)"></button>
+                     <button class="option option-1" onclick="makeMove(5, 1)"></button>
+                     <button class="option option-2" onclick="makeMove(5, 2)"></button>
+                 </div>
+             </div>
+            </div> -->
         </div>
-        <div class="row">
-            <button class="option" onclick="makeMove(1, 0)"></button>
-            <button class="option" onclick="makeMove(1, 1)"></button>
-            <button class="option" onclick="makeMove(1, 2)"></button>
-        </div>
-        <div class="row">
-            <button class="option" onclick="makeMove(2, 0)"></button>
-            <button class="option" onclick="makeMove(2, 1)"></button>
-            <button class="option" onclick="makeMove(2, 2)"></button>
-        </div>
-    </div>
-    <div id="scoreboard">
-    <h3>Scoreboard</h3>
-    </div>
-    <h3>Player 2</h3>
-    <div class="column" id="playerTwo">
-        <div class="row">
-            <button class="option" onclick="makeMove(0, 0)"></button>
-            <button class="option" onclick="makeMove(0, 1)"></button>
-            <button class="option" onclick="makeMove(0, 2)"></button>
-        </div>
-        <div class="row">
-            <button class="option" onclick="makeMove(1, 0)"></button>
-            <button class="option" onclick="makeMove(1, 1)"></button>
-            <button class="option" onclick="makeMove(1, 2)"></button>
-        </div>
-        <div class="row">
-            <button class="option" onclick="makeMove(2, 0)"></button>
-            <button class="option" onclick="makeMove(2, 1)"></button>
-            <button class="option" onclick="makeMove(2, 2)"></button>
-        </div>
-</div>
-    </Section>
-    <script src="./server_j.js"></script>
+    </section>
     <script src="index.js"></script>
+    <script src="board2.js"></script>
 </body>
 </html>

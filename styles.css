@@ -24,6 +24,7 @@ background-color: #FCFFFD;
 .mode{
 display: flex;
 justify-content: center ;
+flex-wrap: wrap;
 }
 
 .btn-mode{
@@ -41,7 +42,7 @@ justify-content: center;
 background-color: #4CB944;
 }
 
-.board{
+#board{
     display: flex;
     justify-content: space-evenly;
 }
@@ -53,13 +54,19 @@ background-color: #4CB944;
     margin: 50px;
 }
 .row{
-margin: 50px;
+margin: 5px 40px 5px 40px;
 }
+
 .option{
     background-color: rgb(219, 219, 219);
     padding: 60px;
     border-radius: 7px;
     display: inline-block;
+    border: none;
+         width: 50px; 
+        height: 50px;
+    font-size: 20px;
+        box-sizing: border-box;
 }
 .option:hover{
     background-color: #4CB944;
