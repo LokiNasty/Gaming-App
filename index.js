@@ -1,4 +1,17 @@
-let currentPlayer = 'X';
+const players=[
+    {
+        'name': 'Player 1',
+        'player':'1',
+        'symbol': "X"
+    },
+    {
+        'name': 'Player 2',
+        'player':'2',
+        'symbol': "O"
+    }
+];
+
+let currentPlayer = players[0].symbol;
 let board = [
     ['', '', ''],
     ['', '', ''],

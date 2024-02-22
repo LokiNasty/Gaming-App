@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section id="theme"><i class="fa-regular fa-moon"></i></section>
     <section id="interface">
         <h1 class="heading">Tic Tac Toe</h1>
         <!-- <div class="mode">
@@ -17,7 +16,7 @@
             <button id="difficult" class="btn-mode" type="mode" onclick="">Difficult</button>
         </div> -->
         <div id="board">
-            <h3>Player 1</h3>
+            <h3 id="currentPlayerLbl">Player 1</h3>
             <div class="column" id="playerOne">
                 <div class="row row-0">
                     <button class="option option-0" onclick="makeMove(0, 0)"></button>
