@@ -34,7 +34,7 @@ function makeMove(row, col) {
         updateScoreboard();
           alert(currentPlayer + ' wins!');
           resetGame();
-      } else if (boardIsFull()) {
+      } else if (boardIsFull()) {   
           alert('It\'s a draw!');
           resetGame();
       } else {

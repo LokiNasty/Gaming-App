@@ -1,25 +1,27 @@
-const express = require ("express")
-const app = express()
+const express = require ('express');
+const http = require ('http');
+const socketIO = require ('socket.io');
 
-const path = require("path")
-const http = require("http")
-const {Server} = require("socket.io")
-const { Socket } = require("engine.io")
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server);
 
+const PORT = process.env.PORT || 3000;
 
-const server = http.createServer(app)
+app.use(express.static('public'));
 
-const io = new Server(server)
-app.use(express.static(path.resolve("")))
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + 'index.html');
+});
 
-io.on("connet",(socket) => {
+socket.on('makeMove', (data) =>{
+    io.to(data.makeMove).emit('moveMade', data);
+});
 
-})
- 
-app.get("/", (req,res) => {
-    return res.sendFile("index.html")
-})
+socket.on('disconnect', () => {
+    console.log('A user has disconnected')
+});
 
-server.listen(5147,() => {
-    console.log("port is connected in to 5147")
-})
+server.listen(PORT, () => {
+    console.log('Server is running on port ${PORT}')
+});

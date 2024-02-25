@@ -1,4 +1,4 @@
-// let currentPlayer = 'X';
+// let currentPlayer = 'O';
 // let board2 = [
 //     ['', '', ''],
 //     ['', '', ''],
@@ -19,7 +19,7 @@
 //           alert('It\'s a draw!');
 //           resetGame();
 //       } else {
-//           currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+//           currentPlayer = currentPlayer === 'O' ? 'X' : 'O';
 //       }
 //   }
 // }
@@ -55,7 +55,7 @@
 // }
 
 // function resetGame() {
-//     currentPlayer = 'X';
+//     currentPlayer = 'O';
 //     board2 = [
 //         ['', '', ''],
 //         ['', '', ''],
